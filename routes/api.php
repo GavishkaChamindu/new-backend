@@ -6,6 +6,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ReaderDetailsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,16 +27,15 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/user', [UserController::class, 'store']);
 //add data
 Route::post('/pos',[ProductController::class,'pro']);
-
 Route::get('/products',[UserController::class,'show']);
-
 Route::post('login',[UserController::class,'login']);
-
-
 Route::delete('delete/{id}',[ProductController::class,'delete']);
+
+
 
 
 
 Route::post('/store', [CustomerController::class, 'store'])->name('store');
 Route::get('/show', [CustomerController::class, 'show']);
 Route::get('/login', [LoginController::class, 'loginCheck']);
+Route::get('/readers', [ReaderDetailsController::class, 'show']);

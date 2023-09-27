@@ -24,8 +24,6 @@ class LoginController extends Controller
             ]);
 
 
-
-
         }
 
         return 'not found';
