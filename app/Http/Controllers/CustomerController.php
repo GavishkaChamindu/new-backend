@@ -104,12 +104,12 @@ class CustomerController extends Controller
 
             return response()->json([
                 'latest_customer' => $latestCustomer,
-                'latest_value' => $latestValue,
-                'first' => $first,
-                'second' => $second,
-                'third' => $third,
-                'fixed_charge_amount' => $fix,
-                'total' => $total,
+                'latest_value' =>number_format($latestValue,2),
+                'first' => number_format($first,2),
+                'second' => number_format($second,2),
+                'third' => number_format($third,2),
+                'fixed_charge_amount' => number_format($fix,2),
+                'total' =>number_format($total,2),
 
             ]);
 
